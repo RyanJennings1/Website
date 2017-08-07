@@ -1,0 +1,27 @@
+<div class="col-md-6 col-md-offset-3">
+  <h2>Reset Password</h2>
+  <form class="form" [formGroup]="form" name="form" (ngSubmit)="submitFormData()">
+    <div class="row">
+      <label class="col-sm-12 form-control-label">Username</label>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-4">
+        <input type="text" class="form-control" formControlName="userName" name="userName">
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-sm-12 form-control-label">Email Address</label>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-4">
+        <input type="email" class="form-control" formControlName="emailAddress" name="emailAddress">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-12">
+        <input class="btn btn-fill pull-right" style="background-color: #3ac5f2" type="submit" value="Send Reset Email">
+      </div>
+    </div><!-- end of form-group row -->
+  </form>
+<div>

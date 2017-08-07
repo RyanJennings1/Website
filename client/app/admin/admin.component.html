@@ -1,0 +1,88 @@
+<!--
+<h1>Admin Page</h1>
+<a [routerLink]="'/new-post'">New Post</a>
+<div>
+  <ul>
+    <li *ngFor="let post of posts">
+        <a [routerLink]="['/edit-post', post._id ]">{{post?.title}}</a> {{post?.date}} <a (click)="deletePost(post._id)">[DELETE]</a>
+    </li>
+  </ul>
+</div>
+-->
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: transparent">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars fa-3x"></i>
+                </button>
+                <a id="navbar-name" class="navbar-brand page-scroll" href="#page-top" style="background-color: transparent">Ryan Jennings - Admin Page</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse collapse in" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="home-link" class="page-scroll" [routerLink]="['/']">Home</a>
+                    </li>
+                    <li>
+                        <a id="blog-link" class="page-scroll" [routerLink]="['/blog']">Blog</a>
+                    </li>
+                    <li>
+                        <a id="newpost-link" class="page-scroll" [routerLink]="['/new-post']">New Post</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!--
+    <header>
+        <div style="background-color: rgba(0,0,0,0.2); min-height: 100%">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h2>Welcome to my Blog Site</h2>
+                <p style="font-size: 25px">
+                    This is a simple <strong>Blog Site</strong> I made using <strong>Angular 2</strong>
+                    on top of a <strong>MongoDB</strong> database to create, store and manage posts.
+                </p>
+                <hr>
+            </div>
+        </div>
+        </div>
+    </header>
+    -->
+
+    <section id="post-section" *ngFor="let post of posts">
+        <div class="container" id="post-container">
+            <div class="row heading-post-row">
+                <div>
+                    <h1>
+                        <a id="post-link" [routerLink]="['/edit-post', post._id]">{{post?.title}}</a>
+                    </h1>
+                    <p class="lead">
+                        by <a id="post-link" [routerLink]="['/']">Ryan Jennings</a>
+                    </p>
+                    <p><i class="fa fa-clock-o"></i> posted on {{post?.date}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img class="img-responsive" src={{post.image}} alt="" id="post-image">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <a id="delete-post-btn" class="btn btn-danger" (click)="deletePost(post._id)">DELETE POST <i class="fa fa-trash"></i></a>
+                    <a id="update-post-btn" class="btn btn-info pull-right" [routerLink]="['/edit-post', post._id]">Update Post <i class="fa fa-plus-circle"></i></a>
+                    <a id="read-post-btn" class="btn btn-primary pull-right" [routerLink]="['/post', post._id]">Read Post <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

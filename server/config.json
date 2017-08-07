@@ -1,0 +1,7 @@
+﻿{
+    "connectionString": "mongodb://localhost:27017/website",
+    "SMapiUrl": "http://ec2-52-30-20-255.eu-west-1.compute.amazonaws.com:8080",
+    "apiUrl": "http://localhost:4000",
+    "SapiUrl": "http://10.52.162.98:3000",
+    "secret": "SECRET FOR THE DATABASE"
+}

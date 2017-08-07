@@ -1,0 +1,81 @@
+<div class="wrapper">
+    <div class="main-panel">
+        <nav class="navbar navbar-default" style="background-color: #4CAF50;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="#toggleNavbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" style="color: white;">Edit Blog Post</a>
+                </div>
+                <div class="collapse navbar-collapsed" id="toggleNavbar">
+                  <ul class="nav navbar-nav">
+                    <li><a [routerLink]="['/commercial-with-stock']" style="color: white">Commercial Female with Stock Bull</a></li>
+                    <li><a [routerLink]="['/pedigree-with-stock']" style="color: white">Pedigree Female with Stock Bull</a></li>
+                    <li><a [routerLink]="['/commercial-with-ai']" style="color: white">Commercial Female with AI Bull</a></li>
+                    <li><a [routerLink]="['/pedigree-with-ai']" style="color: white">Pedigree Female with AI Bull</a></li>
+                    <li><a [routerLink]="['/profile']" style="color: white">Profile</a></li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-user" style="padding: 10px;">
+                  <form class="form" [formGroup]="form" name="form" (ngSubmit)="submitFormData()" #f="ngForm" novalidate>
+                    <div class="form-group row">
+
+                    </div><!-- end of form-group row -->
+                    <div class="form-group row">
+                      <label class="col-sm-4 control-label">Blog Title</label>
+                      <div class="col-sm-8">
+                        <input id="blog-title-box" type="text" formControlName="title" [(ngModel)]="currentPost && currentPost.title">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-4 control-label">Text</label>
+                      <div class="col-sm-8">
+                        <!--
+                             <input type="text" formControlName="text" class="form-control">
+                             -->
+                        <textarea id="blog-text-box" formControlName="text" class="form-control" [(ngModel)]="currentPost && currentPost.text"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-4 control-label">Cover Photo (recommended: 900px x 300px, < 500kb)</label>
+                      <div class="col-sm-8">
+                        <input type="file" accept="image/*" (change)="changeListener($event)">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <div class="col-sm-12">
+                        <input class="btn btn-fill btn-success" type="submit" value="Update">
+                      </div>
+                    </div>
+                </form>
+              </div><!-- end of card user -->
+            </div><!-- end of col-md-12 -->
+        </div><!-- end of row -->
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <!--
+                <div class="copyright pull-right">
+                   <a> &copy; BullMatch</a>
+                </div>
+                -->
+            </div>
+        </footer>
+
+    </div><!-- container fluid -->
+</div><!-- end of content div -->
+</div><!-- end of main panel -->
+</div>

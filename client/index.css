@@ -1,0 +1,14 @@
+/*.radiowrapper {position:absolute;}*/
+
+.radiowrapper input {
+  visibility:hidden;
+  width:0;
+}
+
+.radiowrapper label:hover {
+  font-weight:bold
+}
+
+.radiowrapper input:checked + label {
+  color: orange !important;
+}

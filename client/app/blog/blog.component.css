@@ -1,0 +1,61 @@
+a {
+    color: #4CAF50;
+}
+
+strong {
+    color: white;
+}
+
+hr {
+    max-width: 500px;
+    border-color: #4CAF50;
+}
+
+#more-link {
+    cursor: pointer;
+    color: white;
+}
+
+#about {
+    background-color: #66BB6A;
+}
+
+#home-link {
+    color: white;
+}
+
+#post-section {
+    background-color: #C8E6C9;
+}
+
+#post-section p {
+    color: white;
+}
+
+#post-container {
+    border-bottom: 1px solid #4CAF50; 
+    background-color: #66BB6A;
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 3px 5px 2px #888888;
+}
+
+#post-link {
+    color: white;
+}
+
+#post-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#read-post-btn {
+    margin-right: 10%;
+    margin-top: 20px;
+    color: white;
+    background-color: #1B5E20;
+}
+
+.heading-post-row {
+    margin-left: 5%;
+}

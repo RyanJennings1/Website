@@ -1,0 +1,145 @@
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: transparent">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars fa-3x"></i>
+                </button>
+                <a id="navbar-name" class="navbar-brand page-scroll" href="#page-top" style="background-color: transparent">Ryan Jennings</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse collapse in" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="blog-link" class="page-scroll" [routerLink]="['/blog']" style="color: white">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div style="background-color: rgba(0,0,0,0.2); min-height: 100%">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <!--
+                <img id="homeHeading" src="../../assets/img/bull.png">
+                -->
+                <h2>Welcome to my Website!</h2>
+                <p style="font-size: 25px">I'm a <strong>Software Engineer</strong> with an interest in all types of Computer Programming. I have experience in <strong>Full Stack</strong> Development
+                     and <strong>Hardware</strong> Engineering.</p>
+                <hr>
+                <div class="row">
+                  <div class="col-md-5 col-sm-5">
+                    <a href="https://www.linkedin.com/in/ryan-jennings-586295125/"><i class="fa fa-linkedin fa-3x pull-right" id="more-link"></i></a>
+                  </div>
+                  <div class="col-md-2 col-sm-2"></div>
+                  <div class="col-md-5 col-sm-5">
+                    <a href="https://github.com/RyanJennings1"><i class="fa fa-github fa-3x pull-left" id="more-link"></i></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container" style="border-bottom: 1px solid #4CAF50">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <!--
+                  <img src="../../assets/img/faces/face-5.JPG" width="60%">
+                  -->
+                  <img src="../../assets/img/faces/face-5.JPG" width="60%">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <h2 class="section-heading">About Me</h2>
+                    <hr class="light">
+                    <p style="font-size: 20px">
+                        I'm Ryan Jennings. I'm a Software Developer currently working at Pinpoint Medical.
+                        I have a love of everything involving Computers. I also enjoy learning a host of
+                        languages from Go, Clojure, Python to Irish, German and Russian. I like to perform 
+                        Stand Up Comedy as well and I've done shows in front of dozens to hundreds of people.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="about">
+        <div class="container" style="border-bottom: 1px solid #4CAF50">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <h2>Experience</h2>
+                  <hr>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <div *ngFor="let experience of experiences" style="margin-bottom: 20px">
+                        <div class="row">
+                            <div id="experience-company">{{experience.company}}</div>
+                        </div>
+                        <div class="row">
+                          <div id="experience-job-title" class="col-md-4 col-sm-4"><i>{{experience.jobTitle}} &bull;</i></div>
+                          <div id="experience-start" class="col-md-4 col-sm-4">{{experience.start}} - </div>
+                          <div id="experience-end" class="col-md-4 col-sm-4">{{experience.end}}</div>
+                        </div>
+                        <div class="row">
+                            <div id="experience-description">{{experience.description}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="about">
+        <div class="container" style="border-bottom: 1px solid #4CAF50">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <h2 class="section-heading">Skills</h2>
+                  <hr class="light">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                    <div *ngFor="let skill of skills">
+                        <div id="label-box" class="col-md-12"><strong id="skill-name">{{skill.name}}</strong></div>
+                        <div id="outer-box" class="col-md-12" style="background-color: #d3d3d3">
+                            <div id="skill-box" [style.width.%]="skill.score"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contact Me</h2>
+                    <hr class="primary">
+                    <p>I'm available for freelance full stack development work! Send me an email and I will get back to you as soon as possible.</p>
+                </div>
+                <!--
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>+353 86 123 4567</p>
+                </div>
+                -->
+                <div class="col-lg-4 col-lg-offset-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:ryanjennings1010@gmail.com">ryanjennings1010@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <p>Website designed and made by Ryan Jennings</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>

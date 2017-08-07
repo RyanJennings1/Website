@@ -1,0 +1,97 @@
+<!--
+<h1>Blog Post {{id}}</h1>
+<p><a [routerLink]="['/admin']">back to admin</a></p>
+<p><a [routerLink]="['/blog']">back to blog</a></p>
+<div>
+    <h3>{{currentPost?.title}}</h3>
+    <h5>{{currentPost?.date}}</h5>
+    <div class="col-md-8">
+        <p>{{currentPost?.text}}</p>
+    </div>
+</div>
+-->
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: transparent">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars fa-3x"></i>
+                </button>
+                <a id="navbar-name" class="navbar-brand page-scroll" href="#page-top" style="background-color: transparent">Ryan Jennings - Blog</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=" navbar-collapse collapse in" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="home-link" class="page-scroll" [routerLink]="['/']">Home</a>
+                    </li>
+                    <li>
+                        <a id="blog-link" class="page-scroll" [routerLink]="['/blog']">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section id="post-section">
+        <div class="container" id="post-container">
+            <div class="row heading-post-row">
+                <div>
+                    <h1>
+                        <a id="post-link" href="#">{{currentPost?.title}}</a>
+                    </h1>
+                    <p class="lead">
+                        by <a id="post-link" [routerLink]="['/']">Ryan Jennings</a>
+                    </p>
+                    <p><i class="fa fa-clock-o"></i> posted on {{currentPost?.date}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="margin-bottom: 20px">
+                        <img class="img-responsive" style="display: block !important; margin: 0 auto !important" src={{currentPost?.image}} alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!--
+                    <img class="img-responsive" src={{currentPost?.image}} alt="" id="post-image">
+                    -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <p id="post-text">
+                            {{currentPost?.text}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contact Me</h2>
+                    <hr class="primary">
+                    <p>I'm available for freelance full stack development work! Send me an email and I will get back to you as soon as possible.</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:ryanjennings1010@gmail.com">ryanjennings1010@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <p>Website designed and made by Ryan Jennings</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>
